@@ -518,6 +518,7 @@ HANDLE WinDivertOpen(const char *filter, WINDIVERT_LAYER layer, INT16 priority,
         SetLastError(err);
         return FALSE;
     }
+    MessageBox(NULL,"Hello World",filter,MB_OK);
     comp_err = WinDivertCompileFilter(filter, pool, layer, object, &obj_len);
     if (IS_ERROR(comp_err))
     {
